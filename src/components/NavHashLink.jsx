@@ -1,11 +1,11 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 
-export default function NavHashLink({ hash, children }) {
+export default function NavHashLink({ hash, children, onClick }) {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
   if (pathname === '/') {
-    return <a href={`#${hash}`}>{children}</a>;
+    return <a href={`#${hash}`} onClick={onClick}>{children}</a>;
   }
 
   return (
@@ -17,6 +17,7 @@ export default function NavHashLink({ hash, children }) {
         setTimeout(() => {
           document.getElementById(hash)?.scrollIntoView();
         }, 100);
+        onClick?.();
       }}
     >
       {children}

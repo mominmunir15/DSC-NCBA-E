@@ -159,7 +159,7 @@ export default function HeroCarousel() {
   return (
     <div className="hero-carousel">
       <section
-        className="hero-slider"
+        className="hero-slider max-lg:h-[50vh] max-lg:min-h-[280px] max-lg:rounded-2xl"
         id="hero-slider"
         ref={sliderRef}
         onTouchStart={handleTouchStart}

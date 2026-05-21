@@ -5,33 +5,33 @@ import Footer from '../components/Footer.jsx';
 export default function Home() {
   return (
     <>
-      <header className="site-header">
+      <header className="site-header max-lg:px-3">
         <Navbar />
         <HeroCarousel />
       </header>
 
-      <section className="about-section">
+      <section className="about-section max-lg:flex-col max-lg:gap-8 max-lg:py-12 max-lg:px-6">
         <div className="about-content">
           <span className="about-label">ABOUT US</span>
-          <h2>About DSC NCBAE</h2>
+          <h2 className="max-lg:!text-4xl">About DSC NCBAE</h2>
           <p>Developer Student Clubs (DSC) at NCBAE is a premier, student-led tech community driven by innovation and continuous learning. Our mission is to bridge the gap between academic theory and real-world application by hosting interactive coding workshops, competitive hackathons, and cutting-edge tech seminars. Whether you are a beginner writing your first line of code or an advanced developer building scalable applications, DSC NCBAE is your platform to learn, connect, and grow alongside industry leaders.</p>
           <button className="btn-view-more" type="button">View More ⚡</button>
         </div>
-        <div className="about-image">
+        <div className="about-image max-lg:h-[280px] max-lg:w-full">
           <img src="/assets/images/about/about-image.jpeg" alt="About DSC NCBAE" className="main-about-img" />
-          <div className="circular-badge">
+          <div className="circular-badge max-lg:-top-4 max-lg:-right-4 max-lg:w-14 max-lg:h-14">
             <img src="/assets/images/brand/dsc-logo.png" alt="DSC Logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }} />
           </div>
         </div>
       </section>
 
-      <section className="experts-section" id="team">
-        <div className="section-header">
+      <section className="experts-section max-lg:px-6 max-lg:py-8" id="team">
+        <div className="section-header max-lg:px-4">
           <span className="section-subtitle">OUR TEAM</span>
-          <h2>🔥 Our DSC Experts 🔥</h2>
+          <h2 className="max-lg:!text-3xl">🔥 Our DSC Experts 🔥</h2>
           <p className="subtitle-small">Highly Skilled Professionals</p>
         </div>
-        <div className="experts-grid">
+        <div className="experts-grid max-lg:grid-cols-1 max-lg:gap-6">
           <div className="expert-card red-card">
             <img src="/assets/images/team/expert-1.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} alt="Abdul Raheem" />
             <div className="expert-badge blue-badge">Abdul Raheem 🔥</div>
@@ -60,12 +60,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="faculty-section">
-        <div className="section-header">
+      <section className="faculty-section max-lg:px-6 max-lg:py-8">
+        <div className="section-header max-lg:px-4">
           <span className="section-subtitle">OUR FACULTY ADVISORS</span>
-          <h2>💡 Our Faculty Advisors 💡</h2>
+          <h2 className="max-lg:!text-3xl">💡 Our Faculty Advisors 💡</h2>
         </div>
-        <div className="faculty-grid">
+        <div className="faculty-grid max-lg:grid-cols-1 max-lg:gap-6">
           <div className="faculty-card yellow-card">
             <img src="/assets/images/faculty/fac-1.jpeg" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '15px' }} alt="Dr Naila Naz" />
             <div className="faculty-badge green-badge">Dr Naila Naz 🛡️</div>
@@ -90,42 +90,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="collaborators-section">
-        <div className="section-header">
+      <section className="collaborators-section max-lg:px-6 max-lg:py-8">
+        <div className="section-header max-lg:px-4">
           <span className="section-subtitle">Our Collaborators</span>
-          <h2>Our Highly Esteemed<br />Collaborators</h2>
+          <h2 className="max-lg:!text-3xl">Our Highly Esteemed<br />Collaborators</h2>
         </div>
         <div className="collaborators-grid">
-          <div className="collab-card"><img src="/assets/images/collaborators/collab-1.jpg" alt="Collaborator 1" /></div>
-          <div className="collab-card"><img src="/assets/images/collaborators/collab-2.jpg" alt="Collaborator 2" /></div>
-          <div className="collab-card"><img src="/assets/images/collaborators/collab-3.jpg" alt="Collaborator 3" /></div>
-          <div className="collab-card"><img src="/assets/images/collaborators/collab-4.jpg" alt="Collaborator 4" /></div>
-          <div className="collab-card"><img src="/assets/images/collaborators/collab-1.jpg" alt="Collaborator 1" /></div>
-          <div className="collab-card"><img src="/assets/images/collaborators/collab-2.jpg" alt="Collaborator 2" /></div>
-          <div className="collab-card"><img src="/assets/images/collaborators/collab-3.jpg" alt="Collaborator 3" /></div>
-          <div className="collab-card"><img src="/assets/images/collaborators/collab-4.jpg" alt="Collaborator 4" /></div>
+          <div className="collab-card max-lg:min-w-[240px]"><img src="/assets/images/collaborators/collab-1.jpg" alt="Collaborator 1" /></div>
+          <div className="collab-card max-lg:min-w-[240px]"><img src="/assets/images/collaborators/collab-2.jpg" alt="Collaborator 2" /></div>
+          <div className="collab-card max-lg:min-w-[240px]"><img src="/assets/images/collaborators/collab-3.jpg" alt="Collaborator 3" /></div>
+          <div className="collab-card max-lg:min-w-[240px]"><img src="/assets/images/collaborators/collab-4.jpg" alt="Collaborator 4" /></div>
+          <div className="collab-card max-lg:min-w-[240px]"><img src="/assets/images/collaborators/collab-1.jpg" alt="Collaborator 1" /></div>
+          <div className="collab-card max-lg:min-w-[240px]"><img src="/assets/images/collaborators/collab-2.jpg" alt="Collaborator 2" /></div>
+          <div className="collab-card max-lg:min-w-[240px]"><img src="/assets/images/collaborators/collab-3.jpg" alt="Collaborator 3" /></div>
+          <div className="collab-card max-lg:min-w-[240px]"><img src="/assets/images/collaborators/collab-4.jpg" alt="Collaborator 4" /></div>
         </div>
       </section>
 
-      <section className="what-we-do-section" id="mission">
-        <div className="section-header">
+      <section className="what-we-do-section max-lg:px-4" id="mission">
+        <div className="section-header max-lg:px-4">
           <span className="section-subtitle">Our Mission</span>
-          <h2>What We do</h2>
+          <h2 className="max-lg:!text-3xl">What We do</h2>
         </div>
-        <div className="polaroid-stack">
-          <div className="polaroid p1">
+        <div className="polaroid-stack max-lg:flex-col max-lg:items-center max-lg:gap-6">
+          <div className="polaroid p1 max-lg:!rotate-0 max-lg:!mt-0 max-lg:w-[85%] max-lg:max-w-[300px]">
             <div className="polaroid-image"></div>
             <p>Mission 1</p>
           </div>
-          <div className="polaroid p2">
+          <div className="polaroid p2 max-lg:!rotate-0 max-lg:!mt-0 max-lg:w-[85%] max-lg:max-w-[300px]">
             <div className="polaroid-image"></div>
             <p>Mission 2</p>
           </div>
-          <div className="polaroid p3">
+          <div className="polaroid p3 max-lg:!rotate-0 max-lg:!mt-0 max-lg:w-[85%] max-lg:max-w-[300px]">
             <div className="polaroid-image"></div>
             <p>Mission 3</p>
           </div>
-          <div className="polaroid p4">
+          <div className="polaroid p4 max-lg:!rotate-0 max-lg:!mt-0 max-lg:w-[85%] max-lg:max-w-[300px]">
             <div className="polaroid-image"></div>
             <p>Mission 4</p>
           </div>
