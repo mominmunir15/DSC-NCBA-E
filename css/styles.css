@@ -1,8 +1,8 @@
 :root {
-    --bg-color: #FAF4F0;
+    --bg-color: #F7F7F7;
     --text-color: #1A1A1A;
     --primary-red: #E85A48;
-    --primary-yellow: #F6D66B;
+    --primary-yellow: #FFD97D;
     --primary-blue: #7FB0F6;
     --white: #FFFFFF;
     --light-pink: #FBD5DA;
@@ -54,59 +54,153 @@ h2 {
     font-size: 0.9rem;
 }
 
+/* Site Header (navbar + hero) */
+.site-header {
+    padding: 2rem 1.5rem 0;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1.5rem 4rem;
-    position: absolute;
-    top: 0;
     width: 100%;
-    z-index: 1000;
 }
 
 .nav-links {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+    display: flex;a
+    align-items: stretch;
+    width: 100%;
     background: var(--white);
-    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
     border-radius: 50px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--text-color);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    min-height: 58px;
+    padding: 0 0 0 2.75rem;
+    gap: 7.25rem;
 }
 
-.nav-links a {
+.nav-links-menu {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.45rem 2rem 0.45rem 0;
+}
+
+.nav-links-menu a,
+.active-link,
+.active-pill,
+.btn-join {
+    font-family: 'Product Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    leading-trim: none;
+}
+
+.nav-links-menu a {
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
-    font-size: 0.9rem;
+    white-space: nowrap;
     transition: color 0.3s;
 }
 
-.nav-links a:hover,
-.active-link {
+.nav-links-menu a:hover:not(.active-link):not(.active-pill) {
     color: #666;
+}
+
+.active-link,
+.active-pill {
+    background: var(--primary-yellow);
+    padding: 0.45rem 1.15rem;
+    border-radius: 50px;
+    color: var(--text-color) !important;
 }
 
 .btn-join {
     background: var(--primary-yellow);
-    padding: 0.8rem 2rem;
+    border: 1px solid var(--text-color);
     border-radius: 50px;
-    font-weight: 600 !important;
+    padding: 0 2.25rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    margin-left: auto;
 }
 
-/* Hero Slider */
+/* Hero Carousel */
+.hero-carousel {
+    margin-top: 1.5rem;
+}
+
 .hero-slider {
     width: 100%;
-    height: 60vh;
-    min-height: 500px;
+    height: 80vh;
+    min-height: 420px;
     position: relative;
-    border-radius: 0 0 40px 40px;
+    border-radius: 32px;
+    border: 1px solid var(--text-color);
     overflow: hidden;
-    background: #ccc;
-    /* fallback */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background-color: #ccc;
+}
+
+.hero-slider-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.65s ease-in-out;
+    will-change: transform;
+}
+
+.hero-slide {
+    flex: 0 0 auto;
+    height: 100%;
+    background-size: cover;
+    background-position: center 72%;
+    background-repeat: no-repeat;
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.hero-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid var(--white);
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero-dot.active {
+    background: var(--white);
+    transform: scale(1.15);
+}
+
+.hero-dot:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.45);
 }
 
 .slide {
@@ -474,16 +568,10 @@ h2 {
 }
 
 /* About Page Specific Styles */
-.active-pill {
-    background: var(--primary-yellow);
-    padding: 0.5rem 1.5rem;
-    border-radius: 50px;
-    color: var(--text-color) !important;
-}
-
 .about-hero-image {
     width: 100%;
-    margin-top: 40px; 
+    max-width: 1400px;
+    margin: 1.5rem auto 0;
     padding: 0 4rem;
 }
 .about-hero-image img {
